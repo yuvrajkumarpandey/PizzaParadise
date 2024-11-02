@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Paradise | Register</title>
+    <link rel="stylesheet" href="src/css/register.css" />
+</head>
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="src/img/logo.png" alt="Logo Here" class="logo-img" />
+        </a>
+    </div>
+    <div class="register-container" style="margin-bottom: 1rem;">
+        <p>Create an account</p>
+        <div id="error"></div>
+        <form onsubmit="return validateForm()" method="post">
+            <div class="mb">
+                <input type="text" class="form-control"name="fullname" id="fullname" placeholder="Fullname" />
+            </div>
+            <div class="mb">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" />
+            </div>
+            <div class="mb">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" />
+            </div>
+            <div class="mb">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
+            </div>
+            <div class="mb">
+                <textarea name="address" id="address" placeholder="Address" class="form-control"></textarea>
+            </div>
+            <div class="mb" style="font-weight: 500;color: rgb(33, 33, 33);">
+                <input type="checkbox" name="agree" id="agree" /> By clicking on the checkbox, you agree to our <a href="">terms</a> and <a href="">conditions.</a>
+            </div>
+            <div>
+                <button class="reg-btn" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm(){
+            let fullname = document.getElementById('fullname').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let password = document.getElementById('password').value;
+            let address = document.getElementById('address').value;
+            let errorBox = document.getElementById('error');
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(fullname.length < 3){
+                errorBox.innerHTML="Please Enter Your Fullname";
+                errorBox.style.display="block";
+                return false;
+            }
+            if(!emailPattern.test(email)){
+                errorBox.innerHTML="Please Enter Valid Email";
+                errorBox.style.display="block";
+                return false;
+            }
+            if(phone.length != 10){
+                errorBox.innerHTML="Please Enter Correct Phone Number";
+                errorBox.style.display="block";
+                return false;
+            }
+            if(password.length < 8){
+                errorBox.innerHTML="Password Should Be At least 8 characters";
+                errorBox.style.display="block";
+                return false;
+            }
+            if(address.length < 5){
+                errorBox.innerHTML="Enter a Valid Address";
+                errorBox.style.display="block";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

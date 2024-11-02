@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #FFEEEE;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.logo-img{
+    height: 70px;
+    width: auto;
+}
+
+.register-container{
+    width: 400px;
+    height: auto;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.1);
+}
+
+.register-container p{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.mb{
+    margin-bottom: 1rem;
+}
+
+.form-control{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(213, 209, 209);
+}
+
+.reg-btn{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    font-size: 1.2rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    background-color: #F94E4E;
+    color: #fff;
+}
+
+.reg-btn:hover{
+    background-color: #ca2323;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#error{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    background-color: #a61b1b;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: none;
+}

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --redColor: #F94E4E;
+    --FontOne: "Poppins", sans-serif;
+    --FontTwo: "Poor Story", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-image: url(../img/bgImg.svg);
+}
+
+.hidden{
+    display: none;
+}
+
+.left-navbar:hover .hidden{
+    display: inline-block;
+}
+
+.left-navbar:hover .nav-ul{
+    align-items: start;
+}
+
+.left-navbar{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem;
+    width: auto;
+    background-color: var(--redColor);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav-ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.left-navbar-user-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.menu-link::before{ 
+    content:url('../img/icons/menu.svg');
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.cart-link::before{ 
+    content:url('../img/icons/Shopping\ cart.svg');
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.track-link::before{ 
+    content:url('../img/icons/Map\ pin.svg');
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.wallet-link::before{ 
+    content:url('../img/icons/Credit\ card.svg');
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.nav-link, .left-navbar-user-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--FontTwo);
+    font-size: 1.2rem;
+}
+
+.right-main-container{
+    width: calc(100%-84px);
+    margin-left: 84px;
+}
+
+.right-main-top{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-main-top-search, .right-main-top-logo{
+    width: 50%;
+    height: auto;
+}
+
+.search-box{
+    padding: 0.8rem 1.5rem;
+    width: 60%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.logo-img{
+    height: 70px;
+}
+
+.right-main-top-logo{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-section, .history-section{
+    width: 100%;
+    padding: 0rem 2rem 2rem 2rem;
+}
+
+.profile-main{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.usr-detals img{
+    height: 100px;
+}
+
+.usr-detals{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.section-title{
+    text-align: left;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.history-card{
+    width: 24%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.history-card img{
+    width: 100%;
+}
+.history-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
